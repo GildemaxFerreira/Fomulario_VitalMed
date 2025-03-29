@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Pacientes</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+:root{
+ --red : #49ef24;
+ --white : #fff
+ --black : #lelc2a;
+}
+body{
+  color: rgb(111, 209, 75);
+  background: white;
+}
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  box-shadow: 0 0.1rem 0.5rem #ccc;
+  width: 100%;
+  background: var(rgb(111, 209, 75));
+  transition: all 0.5s;
+}
+.navigation .logo{
+  color: rgb(111, 209, 75);
+  font-size: 5.0rem;
+  font-weight: 600;
+}
+.navigation ul{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.navigation ul li a{
+  color: #49ef24;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.navigation ul li a:hover{
+  color: black;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: linear-gradient(to right, rgb(111, 209, 75));
+}
+.box{
+  color: rgb(7, 161, 7);
+  position: relative;
+  top: 100%;
+  left: 20%;
+  background-color: rgba(205, 249, 204, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  width: 50%;
+}
+legend{
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+.inputBox{
+  position: relative;
+}
+.inputUser{
+  background: none;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  font-size: 17px;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.labelIput{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+#subimit{
+  background-image: linear-gradient(to right, rgb(205, 249, 204));
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#subimit:hover{
+  background-image: linear-gradient(to right, rgb(53, 240, 43));
+}
+button{
+  background-color: #49ef24;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 15px;
+}
+button:hover{
+  background-color: rgb(182, 245, 176);
+  cursor: pointer;
+}
+.imagem{
+  width: 45%;
+  float: left;
+  height: 200px;
+  margin-right: 10%;
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="#" class="logo">VitalMed</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#">Início</a></li>
+        <li class="nav-item"><a href="#">Cadastro</a></li>
+        <li class="nav-item"><a href="#">Formulários</a></li>
+        <li class="nav-item"><a href="#">Documentação</a></li>
+        <i class='bx bx-search'></i>
+      </ul>
+      <div class="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <br><br><br><br>
+  <form class="box" action="cadastro.html">
+  <legend>Dados do Paciente</legend>
+  <br><br><br>
+  <div class="inputbox">
+    <input type="text" name="nome" id="nome" class="inputUser" required>
+    <label for="nome" class="labelinput">Nome Completo</label>
+  </div>
+  <br>
+  <div class="inputbox">
+    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+    <label for="cpf" class="labelinput">CPF</label>
+  </div>
+  <br>
+  <div class="inputbox">
+    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+    <label for="endereco" class="labelinput">Endereço</label>
+  </div>
+  <br>
+  <div class="inputbox">
+    <input type="text" name="telefone" id="telefone" class="inputUser" required>
+    <label for="telefone" class="labelinput">Telefone</label>
+  </div>
+  <br>
+  <div class="inputbox">
+    <input type="text" name="email" id="email" class="inputUser" required>
+    <label for="email" class="labelinput">E-mail</label>
+  </div>
+  <br>
+  <div class="inputbox">
+    <input type="text" name="contatos_emergencia" id="contatos_emergencia" class="inputUser" required>
+    <label for="contatos_emergencia" class="labelinput">Contatos de Emergência</label>
+  </div>
+  <br><br>
+  <div class="inputbox">
+    <label for="data">Data de Nascimento</label>
+    <input type="date" name="data" id="data" required>
+  </div>
+  <br>
+  <p>Sexo</p>
+  <br>
+  <div>
+    <input type="radio" name="masculino" id="masculino" required>
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="feminino" id="feminino" required>
+    <label for="feminino">Feminino</label>
+    <input type="radio" name="outros" id="outros" required>
+    <label for="outros">outros</label>
+  </div>
+  <br>
+    <div class="inputbox">
+      <input type="text" name="diagnosticos" id="diagnosticos" class="inputUser" required>
+      <label for="diagnosticos" class="labelinput">Diagnósticos Anteriores</label>
+    </div>
+    <br>
+    <div class="inputbox">
+      <input type="text" name="alergias" id="alergias" class="inputUser" required>
+      <label for="alergias" class="labelinput">Alérgias</label>
+    </div>
+    <br>
+    <div class="inputbox">
+      <input type="text" name="medicamentos" id="medicamentos" class="inputUser" required>
+      <label for="medicamentos" class="labelinput">Medicamentos em Uso</label>
+    </div>
+    <br>
+    <div class="inputbox">
+      <input type="text" name="historico" id="historico" class="inputUser" required>
+      <label for="historico" class="labelinput">Histórico de doença na familia</label>
+    </div>
+    <br>
+    <div class="inputbox">
+      <input type="text" name="habitos" id="habitos" class="inputUser" required>
+      <label for="habitos" class="labelinput">Hábitos de Vida</label>
+    </div>
+  </form>
+  <br>
+  <button>Enviar</button>
+  <img class="imagem" src="logo_vitalmed.png" alt="">
+</body>
+</html>
